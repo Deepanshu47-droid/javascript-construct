@@ -3,15 +3,24 @@ const readlineSync = require("readline-sync"); // Import readline-sync
 // Take user input
 let number = parseInt(readlineSync.question("Enter a number (1, 10, 100, 1000, etc.): "));
 
-switch (number) {
-    case 1: console.log("Unit"); break;
-    case 10: console.log("Ten"); break;
-    case 100: console.log("Hundred"); break;
-    case 1000: console.log("Thousand"); break;
-    case 10000: console.log("Ten Thousand"); break;
-    case 100000: console.log("Lakh"); break;
-    case 1000000: console.log("Ten Lakh"); break;
-    case 10000000: console.log("Crore"); break;
-    case 100000000: console.log("Ten Crore"); break;
-    default: console.log("Invalid input! Enter numbers like 1, 10, 100, 1000, etc.");
+if (number === 1) {
+    console.log("Unit");
+} else if (number === 10) {
+    console.log("Ten");
+} else if (number === 100) {
+    console.log("Hundred");
+} else if (number === 1000) {
+    console.log("Thousand");
+} else if (number === 10000) {
+    console.log("Ten Thousand");
+} else if (number === 100000) {
+    console.log("Lakh");
+} else if (number === 1000000) {
+    console.log("Ten Lakh");
+} else if (number === 10000000) {
+    console.log("Crore");
+} else if (number === 100000000) {
+    console.log("Ten Crore");
+} else {
+    console.log("Invalid input! Enter numbers like 1, 10, 100, 1000, etc.");
 }
