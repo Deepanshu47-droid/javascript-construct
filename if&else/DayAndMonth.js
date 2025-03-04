@@ -5,11 +5,19 @@ let args = process.argv.slice(2);
 let day = parseInt(args[0]);
 let month = parseInt(args[1]);
 
-// Check if the date is within the range
-let isValid = (month === 3 && day >= 20) || 
-              (month === 4) || 
-              (month === 5) || 
-              (month === 6 && day <= 20);
+let isValid = false;
+
+if ((month === 3 && day >= 20)) {
+    isValid = true;
+} else if (month === 4) {
+    isValid = true;
+} else if (month === 5) {
+    isValid = true;
+} else if (month === 6 && day <= 20) {
+    isValid = true;
+} else {
+    isValid = false;
+}
 
 // Print result
 console.log(isValid);
